@@ -8,7 +8,7 @@ var myId;
 
 // get the data from the vertical
 function get_data(callback) {
-  anonID = analytics.anonID().anonymousId;
+  anonID = $('#hashed_id').text();
   var url = window.location.href;
   var split = url.split("/");
   chap = split[6];
@@ -89,6 +89,8 @@ function update_followed() {
 }
 
 </script>
+
+<p id="hashed_id" style="display:none;">%%USER_ID%%</p>
 
 <div id="container" style="height:130px; width:800px; padding: 20px;display: none;">
 <p style="font-size: 20px; font-weight:bold; font-style:italic;margin-bottom:0px">Suggestion for You</p>
